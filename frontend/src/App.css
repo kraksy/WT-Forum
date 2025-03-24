@@ -1,0 +1,172 @@
+/* Reset pro všechny prohlížeče */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Základní styl pro tělo stránky */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Nový moderní font */
+  background-color: #f4f4f9;  /* Světlejší pozadí pro lepší kontrast */
+  color: #333;  /* Temně šedá barva textu pro lepší čitelnost */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Hlavní kontejner s flexboxem */
+#root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Kontejner pro obě části: levý sloupec a pravý sloupec */
+.content-wrapper {
+  display: flex;
+  gap: 20px; /* Mezera mezi sloupci */
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #fff;  /* Bílý pozadí pro celý obsah */
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Levá část (formulář pro nový příspěvek) */
+.new-post {
+  flex: 1 1 30%;  /* Levá část zabírá 30% šířky */
+  background-color: #ffffff; /* Bílý pozadí pro formulář */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Pravá část (seznam příspěvků) */
+.posts-wrapper {
+  flex: 1 1 65%;  /* Pravá část zabírá 65% šířky */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+/* Karty pro příspěvky */
+.post {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.post:hover {
+  transform: scale(1.02);  /* Mírně zvětší karty při najetí */
+}
+
+/* Základní nadpis pro příspěvek */
+.post h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;  /* Temně modrá barva pro nadpisy */
+  margin-bottom: 15px;
+  font-weight: 600;  /* Silnější nadpis */
+}
+
+/* Text pro obsah příspěvku */
+.post p {
+  font-size: 1.1rem;
+  color: #555;  /* Světlejší šedá pro text */
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Meta informace o příspěvku */
+.post .meta {
+  font-size: 0.9rem;
+  color: #888;  /* Světlejší šedá pro meta informace */
+  margin-top: 10px;
+}
+
+/* Tlačítka pro přidání příspěvků */
+button {
+  padding: 12px 20px;
+  background-color: #3498db;  /* Modrá barva pro tlačítka */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: 100%; /* Tlačítka mají šířku 100% */
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #2980b9;  /* Tmavší modrá při hoveru */
+  transform: scale(1.05);  /* Mírně zvětší tlačítka při hoveru */
+}
+
+/* Tlačítko pro vytvoření příspěvku - oddělené zobrazení */
+.new-post button {
+  margin-top: 15px;
+}
+
+/* Formulář pro příspěvky */
+form {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Styly pro labely */
+label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+  display: block;
+}
+
+/* Styly pro input a textarea */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  font-size: 1rem;
+}
+
+/* Efekt při zaostření inputů a textarea */
+input:focus, textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Speciální styl pro textarea (větší prostor pro text) */
+textarea {
+  min-height: 120px;
+}
+
+/* Důležité mezery pro formulářové elementy */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Zlepšení layoutu na větších obrazovkách */
+@media (min-width: 1200px) {
+  .content-wrapper {
+    padding: 0 2rem;
+  }
+
+  .post {
+    width: 100%;
+  }
+}
