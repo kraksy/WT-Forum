@@ -27,6 +27,7 @@ const Posts = () => {
 
             {posts.map((post) => (
                 <div key={post.id} className="post">
+                    <p className='icon'> </p>
                     <h2>{post.title}</h2>
                     <p>{post.content}</p>
                     <p className="meta">Vytvořeno: {new Date(post.created_at).toLocaleString()}</p>

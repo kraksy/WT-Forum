@@ -8,17 +8,24 @@
 /* Základní styl pro tělo stránky */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Nový moderní font */
-  background-color: #f4f4f9;  /* Světlejší pozadí pro lepší kontrast */
-  color: #333;  /* Temně šedá barva textu pro lepší čitelnost */
+  background-color: #2c3e50;
+  color: #000000;  /* Temně šedá barva textu pro lepší čitelnost */
   min-height: 100vh;
   display: flex;
   justify-content: center;
   padding: 20px;
 }
 
+h1 {
+  margin: 10px;
+  color: #455361;
+}
+
 /* Hlavní kontejner s flexboxem */
 #root {
+  background-color: #243342;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   padding: 20px;
@@ -31,7 +38,7 @@ body {
   width: 100%;
   max-width: 1200px;
   padding: 20px;
-  background-color: #fff;  /* Bílý pozadí pro celý obsah */
+  background-color: #2c3e50;  /* Bílý pozadí pro celý obsah */
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
@@ -39,7 +46,7 @@ body {
 /* Levá část (formulář pro nový příspěvek) */
 .new-post {
   flex: 1 1 30%;  /* Levá část zabírá 30% šířky */
-  background-color: #ffffff; /* Bílý pozadí pro formulář */
+  background-color: #3e5063; /* Bílý pozadí pro formulář */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -57,8 +64,9 @@ body {
 
 /* Karty pro příspěvky */
 .post {
-  background-color: #ffffff;
-  padding: 20px;
+  background-color: #1f2b36;
+  margin: 10px;
+  padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -72,7 +80,7 @@ body {
 /* Základní nadpis pro příspěvek */
 .post h2 {
   font-size: 1.8rem;
-  color: #2c3e50;  /* Temně modrá barva pro nadpisy */
+  color: #455361;  /* Temně modrá barva pro nadpisy */
   margin-bottom: 15px;
   font-weight: 600;  /* Silnější nadpis */
 }
@@ -80,7 +88,7 @@ body {
 /* Text pro obsah příspěvku */
 .post p {
   font-size: 1.1rem;
-  color: #555;  /* Světlejší šedá pro text */
+  color: #b9abab;  /* Světlejší šedá pro text */
   line-height: 1.6;
   margin-bottom: 10px;
 }
@@ -92,10 +100,17 @@ body {
   margin-top: 10px;
 }
 
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: #182027;
+}
+
 /* Tlačítka pro přidání příspěvků */
 button {
   padding: 12px 20px;
-  background-color: #3498db;  /* Modrá barva pro tlačítka */
+  background-color: #1d2833;
+  margin: 5px; /* Modrá barva pro tlačítka */
   color: white;
   border: none;
   border-radius: 5px;
@@ -117,7 +132,7 @@ button:hover {
 
 /* Formulář pro příspěvky */
 form {
-  background-color: #fff;
+  background-color: #597088;
   padding: 20px;
   margin-top: 20px;
   border-radius: 8px;
@@ -129,7 +144,7 @@ form {
 label {
   font-size: 1rem;
   margin-bottom: 8px;
-  color: #333;
+  color: #161318;
   display: block;
 }
 
@@ -140,13 +155,13 @@ input, textarea {
   margin-bottom: 15px;
   border-radius: 5px;
   border: 1px solid #ddd;
-  background-color: #fafafa;
+  background-color: #2c3e50;
   font-size: 1rem;
 }
 
 /* Efekt při zaostření inputů a textarea */
 input:focus, textarea:focus {
-  border-color: #3498db;
+  border-color: #667681;
   outline: none;
 }
 
